@@ -1,3 +1,4 @@
+import calendar.CalendarProxy;
 import date.*;
 import date_template.DateType;
 import date_template.MakeDate;
@@ -33,6 +34,9 @@ public class Main {
 
         // Display d1 info
 //        d1.displayDateInfo();
+
+        CalendarProxy calendarProxy = CalendarProxy.getInstance();
+        calendarProxy.setTime(date1);
 
         // Notify
         settings.notifyUser();
