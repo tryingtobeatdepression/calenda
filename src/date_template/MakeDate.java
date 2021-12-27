@@ -1,16 +1,19 @@
 package date_template;
 
 import date.Date;
+import date.Event;
+import date.Meeting;
 
 public class MakeDate {
+	private Date date = null;
 	protected DateType type = DateType.DATE;
 	public Date make() {
-		Date date = new Date();
+		Date date = null;
 		switch (type) {
-			case DATE: dateStep(); break;
-			case EVENT: eventStep(); break;
-			case MEETING: meetingStep(); break;
-			case CONFERENCE: conferenceStep(); break;
+			case DATE: date = new Date(); dateStep(); break;
+			case EVENT: date = new Event(); eventStep(); break;
+			case MEETING: date = new Meeting(); meetingStep(); break;
+			case CONFERENCE: date = new Meeting(); conferenceStep(); break;
 		}
 		return date;
 	}
