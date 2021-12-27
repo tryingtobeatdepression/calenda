@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Date implements IDate {
-
 	protected List<IDate> dates = new ArrayList<>();
 	protected String dateInfo = "Date Concrete Class!";
 
@@ -14,12 +13,7 @@ public class Date implements IDate {
 			date.displayDateInfo();
 	}
 
-	public void addPartialDate(Date date) {
-		dates.add(date);
-	}
+	public void addPartialDate(Date date) { dates.add(date);}
 
-	public void removePartialDate(Date date) {
-	 	dates.remove(date);
-	}
-
+	public void removePartialDate(Date date) { dates.remove(date);}
 }

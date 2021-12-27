@@ -25,8 +25,8 @@ public class AppSettings {
 	}
 
 	public void notifyUser() {
-		if(soundNotifications) {
-			notifier = new TextNotifier("Message!");
+		if(!soundNotifications) {
+			notifier = new TextNotifier("Message: Hello, World!" );
 		} else {
 			notifier = new SoundNotifier();
 		}

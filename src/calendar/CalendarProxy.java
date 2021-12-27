@@ -3,10 +3,8 @@ package calendar;
 import date.Date;
 
 public class CalendarProxy implements ICalendar {
-
 	private CalendarService service;
 	private CalendarProxy instance;
-
 	private CalendarProxy() {}
 
 	public Boolean checkAccess() {
@@ -14,12 +12,6 @@ public class CalendarProxy implements ICalendar {
 		return true;
 	}
 
-	public void setTime(String time) {
-		service.setTime(time);
-	}
-
-	public CalendarProxy getInstance() {
-		return this.instance;
-	}
-
+	public void setTime(String time) { service.setTime(time);}
+	public CalendarProxy getInstance() { return this.instance;}
 }

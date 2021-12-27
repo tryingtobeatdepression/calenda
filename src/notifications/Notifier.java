@@ -1,7 +1,5 @@
 package notifications;
 
 public interface Notifier {
-
-	void notifyy();
-
+	public void notifyy();
 }
